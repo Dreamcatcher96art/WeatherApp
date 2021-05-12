@@ -1,8 +1,25 @@
+body {
+  background-image: url(weather.jpg);
+}
 .container {
   text-align: center;
+  padding: 5%;
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  background: transparent;
+}
+.card body-page {
+  border-radius: 50px;
+}
+.search-form {
+  padding-top: 20px;
 }
 .weather {
   list-style: none;
+}
+.forecast {
+  padding: 20px;
 }
 small {
   text-align: center;

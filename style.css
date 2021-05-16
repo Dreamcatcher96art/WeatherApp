@@ -24,14 +24,22 @@ body {
   border-radius: 5px;
   border: solid 1px #7b6079;
 }
-h1 {
-  font-size: 24px;
+.city {
+  font-size: 50px;
+  font-weight: bold;
 }
-.ms-3 {
-  margin-right: 0px;
+h2 {
+  font-size: 20px;
+}
+#temperature {
+  font-size: 50px;
+  font-weight: bold;
 }
 .weather-description {
   text-transform: capitalize;
+}
+.condition {
+  margin-bottom: 20px;
 }
 .weather {
   list-style: none;

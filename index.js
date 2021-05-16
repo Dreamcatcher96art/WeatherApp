@@ -36,10 +36,21 @@ iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.dat
 iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(city){
 let apiKey = "97a9745b0c3a1f932357060a2331ab49";
-let city = "GDYNIA"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-
 axios.get(apiUrl).then(displayTemperature)
+}
 
+
+function handleSubmit(event){
+    event.preventDefault();
+    let cityInput = document.querySelector("#enter-city");
+    search(cityInput.value)
+}
+
+search("Gdynia");
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

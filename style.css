@@ -28,13 +28,14 @@ h1 {
   font-size: 24px;
 }
 .ms-3 {
-  margin-left: 0px;
+  margin-right: 0px;
 }
 .weather-description {
   text-transform: capitalize;
 }
 .weather {
   list-style: none;
+  margin-bottom: 20px;
 }
 .forecast {
   padding: 20px;

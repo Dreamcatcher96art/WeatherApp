@@ -1,19 +1,31 @@
 body {
-  background-image: url(weather.jpg);
+  background-image: url(sky.png);
+  background-size: 1400px;
 }
 .container {
   text-align: center;
   padding: 5%;
   font-family: "Ubuntu", sans-serif;
-  margin-left: 20%;
-  margin-right: 20%;
-  background: transparent;
+  max-width: 600px;
+  max-height: 600px;
 }
-.card body-page {
-  border-radius: 50px;
+.body-page {
+  border-radius: 15px;
+  border: solid 1px #7b6079;
 }
 .search-form {
   padding-top: 20px;
+}
+#search-city {
+  border-radius: 5px;
+  border: solid 1px #7b6079;
+}
+#enter-city {
+  border-radius: 5px;
+  border: solid 1px #7b6079;
+}
+h1 {
+  font-size: 24px;
 }
 .weather {
   list-style: none;

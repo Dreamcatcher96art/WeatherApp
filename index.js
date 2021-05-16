@@ -37,7 +37,7 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "97a9745b0c3a1f932357060a2331ab49";
-let city = "Lisbon"
+let city = "GDYNIA"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 

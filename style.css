@@ -27,6 +27,9 @@ body {
 h1 {
   font-size: 24px;
 }
+.ms-3 {
+  margin-left: 0px;
+}
 .weather-description {
   text-transform: capitalize;
 }

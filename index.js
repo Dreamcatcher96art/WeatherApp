@@ -31,10 +31,14 @@ let windSpeedElement = document.querySelector("#winds");
 windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
 let timeElement = document.querySelector("#time");
 timeElement.innerHTML = formatDate(response.data.dt*1000)
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png `);
+iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "97a9745b0c3a1f932357060a2331ab49";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+let city = "Lisbon"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 
 axios.get(apiUrl).then(displayTemperature)

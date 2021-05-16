@@ -27,6 +27,9 @@ body {
 h1 {
   font-size: 24px;
 }
+.weather-description {
+  text-transform: capitalize;
+}
 .weather {
   list-style: none;
 }

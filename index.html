@@ -22,31 +22,26 @@
             </form>
             <hr>
         </div>
-        <div class="city">
-            <h1>
-                city
-            </h1>
+        <div class="city" id="city">
+            <h1></h1>
         </div>
+        <div class = "time" id="time"><h2>222222</h2></div>
         <div class="row">
             <div class="col-sm-6 temperature">
-                <div class="value ms-3">
-                    25
-                </div>
+                <div class="value ms-3" id="temperature"></div>
                 <div class="units ms-3">
                     c|f
                 </div>
                 <div class="image ms-3">
                     <img src="" alt="">
                 </div>
-                <div class="weather-description ms-3">
-                    sun
-                </div>
+                <div class="weather-description ms-3" id="description"></div>
             </div>
             <div class="col-sm-6 condition">
                 <ul class="weather">
-                   <li class="hum">Humidity</li>
-                   <li class="pre">Pressure</li>
-                   <li class="wind">Wind Speed</li> 
+                   <li class="hum">Humidity: <span  id="hum"></span>%</li>
+                   <li class="press">Pressure: <span id="press"></span> mbar</li>
+                   <li class="winds">Wind Speed: <span id="winds"></span> km/h</li> 
                 </ul>
             </div>
         </div>

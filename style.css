@@ -4,10 +4,10 @@ body {
 }
 .container {
   text-align: center;
-  padding: 5%;
+  padding-top: 30px;
+  padding-bottom: 5px;
   font-family: "Ubuntu", sans-serif;
-  max-width: 600px;
-  max-height: 600px;
+  margin: 0 auto;
 }
 .body-page {
   border-radius: 15px;
@@ -28,26 +28,39 @@ body {
   font-size: 50px;
   font-weight: bold;
 }
-h2 {
-  font-size: 20px;
+.time {
+  font-size: 5px;
 }
 #temperature {
   font-size: 50px;
   font-weight: bold;
 }
+.col-sm-6 {
+  padding-left: 50px;
+}
 .weather-description {
   text-transform: capitalize;
-}
-.condition {
-  margin-bottom: 20px;
 }
 .weather {
   list-style: none;
   margin-bottom: 20px;
+  font-size: 20px;
+  padding-right: 50px;
+  padding-top: 50px;
 }
-.forecast {
-  padding: 20px;
+.weather-forecast {
+  display: block;
+  padding-top: 7px;
+  white-space: nowrap;
+  left: 0px;
+  top: 0px;
+  transform: translate3d(0px, 0px, 0px);
+  transition: -webkit-transform 0ms ease-in-out 0s;
 }
-small {
+.day {
+  text-align: center;
+  margin: 10px;
+}
+.small {
   text-align: center;
 }

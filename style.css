@@ -24,9 +24,15 @@ body {
   border-radius: 5px;
   border: solid 1px #7b6079;
 }
-.city {
+#city {
   font-size: 50px;
   font-weight: bold;
+}
+#country {
+  font-size: 20px;
+}
+h1 {
+  display: inline;
 }
 h2 {
   font-size: 15px;

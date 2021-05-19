@@ -13,19 +13,32 @@ let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`
 }
 
+function formatTime(timestamp){
+let date = new Date(timestamp*1000);
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let day = days[date.getDay()];
+return`${day}`;
+}
+
 function displayForecast(response){
-    console.log(response.data.daily)
+    let forecast = response.data.daily; 
+
+
+
     let forecastElement = document.querySelector("#forecast");
+
+
     let forecastHTML = "";
-    let days = ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    days.forEach(function(day){
-    forecastHTML = forecastHTML+`
+    forecast.forEach(function(forecastDay, index){
+        if (index<7){
+    forecastHTML = forecastHTML + `
             <div class="card">
-                <p class="day">${day}</p>
-                <p><img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny" width="50" class="picture" id="picture"></p>
-                <p class="temperature-forecast">18/12</p>
-            </div>`  
-    })
+                <p class="day">${formatTime(forecastDay.dt)}</p>
+                <p><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sunny" width="50" class="picture" id="picture"></p>
+                <p class="temperature-forecast">${Math.round(forecastDay.temp.max)}&deg/${Math.round(forecastDay.temp.min)}&deg</p>
+            </div>`;
+        }  
+    });
     forecastElement.innerHTML = forecastHTML
 }
 
@@ -46,6 +59,8 @@ let temperatureElement = document.querySelector("#temperature");
 temperatureElement.innerHTML = Math.round(response.data.main.temp);
 let cityElement = document.querySelector("#city");
 cityElement.innerHTML = response.data.name;
+let countryElement = document.querySelector("#country");
+countryElement.innerHTML = response.data.sys.country;
 let descriptionElement = document.querySelector("#description");
 descriptionElement.innerHTML = response.data.weather[0].description;
 let humidityElement = document.querySelector("#hum");

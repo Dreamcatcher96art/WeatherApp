@@ -8,7 +8,9 @@
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@1,300&family=Girassol&display=swap"
+    rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
 </head>
@@ -31,9 +33,12 @@
         <div class = "time"><h2>Last updated <span id="time"></span></h2></div>
         <div class="row">
             <div class="col-sm-6 temperature">
-                <div id="temperature"><span>&deg</span></div>
+                <div class="temp">
+                    <span id="temperature"></span>
+                    <span class="unit">&degC</span>
+                </div>
                 <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny" id="icon">
-                <div class="weather-description " id="description"></div>
+                <div class="weather-description" id="description"></div>
             </div>
             <div class="col-sm-6 condition">
                 <ul class="weather">

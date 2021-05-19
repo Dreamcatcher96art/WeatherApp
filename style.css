@@ -4,32 +4,37 @@ body {
 }
 .container {
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 5px;
-  font-family: "Ubuntu", sans-serif;
   margin: 0 auto;
+  padding: 30px 150px 5px 150px;
+  font-family: "Crimson Pro", serif;
 }
 .body-page {
   border-radius: 15px;
-  border: solid 1px #7b6079;
+  border: solid 1px #480032;
+  box-shadow: 10px 10px 10px #7b6079;
 }
 .search-form {
   padding-top: 20px;
 }
 #search-city {
   border-radius: 5px;
-  border: solid 1px #7b6079;
+  border: solid 1px #480032;
+  background: #480032;
+  color: #fff;
+  box-shadow: 5px 5px 5px #480032;
+  font-size: 15px;
 }
 #enter-city {
   border-radius: 5px;
-  border: solid 1px #7b6079;
+  border: solid 1px #480032;
+  font-size: 15px;
 }
 #city {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
 }
 #country {
-  font-size: 20px;
+  font-size: 15px;
 }
 h1 {
   display: inline;
@@ -38,21 +43,30 @@ h2 {
   font-size: 15px;
 }
 #temperature {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
 }
+.temp {
+  position: relative;
+}
+.unit {
+  font-size: 20px;
+  position: relative;
+  bottom: 20px;
+}
 .col-sm-6 {
-  padding-left: 50px;
+  padding-left: 40px;
 }
 .weather-description {
   text-transform: capitalize;
+  font-size: 15px;
 }
 .weather {
   list-style: none;
   margin-bottom: 20px;
-  font-size: 20px;
-  padding-right: 50px;
-  padding-top: 50px;
+  font-size: 30px;
+  padding-right: 100px;
+  padding-top: 30px;
 }
 .forecast {
   padding: 20px;
@@ -62,10 +76,24 @@ h2 {
   background: transparent;
   align-content: center;
 }
+.temperature-forecast {
+  font-size: 20px;
+}
 .day {
   margin-top: 1rem;
   margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 20px;
 }
 .small {
   text-align: center;
+  font-family: "Crimson Pro", serif;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #ce1212;
 }

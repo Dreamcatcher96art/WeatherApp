@@ -34,8 +34,8 @@ function displayForecast(response){
     forecastHTML = forecastHTML + `
             <div class="card">
                 <p class="day">${formatTime(forecastDay.dt)}</p>
-                <p><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sunny" width="50" class="picture" id="picture"></p>
-                <p class="temperature-forecast">${Math.round(forecastDay.temp.max)}&deg/${Math.round(forecastDay.temp.min)}&deg</p>
+                <p class"forecast-picture"><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sunny" width="60" class="picture" id="picture"></p>
+                <p class="temperature-forecast">${Math.round(forecastDay.temp.max)}&deg/<small>${Math.round(forecastDay.temp.min)}&deg</small></p>
             </div>`;
         }  
     });

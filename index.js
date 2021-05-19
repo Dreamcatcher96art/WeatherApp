@@ -13,7 +13,20 @@ let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`
 }
 
-
+function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = "";
+    let days = ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+    days.forEach(function(day){
+    forecastHTML = forecastHTML+`
+            <div class="card">
+                <p class="day">${day}</p>
+                <p><img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny" width="50" class="picture" id="picture"></p>
+                <p class="temperature-forecast">18/12</p>
+            </div>`  
+    })
+    forecastElement.innerHTML = forecastHTML
+}
 
 function displayTemperature(response){
     console.log(response.data)
@@ -50,7 +63,12 @@ function handleSubmit(event){
 }
 
 search("Gdynia");
-
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+
+
+
+

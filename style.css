@@ -28,8 +28,8 @@ body {
   font-size: 50px;
   font-weight: bold;
 }
-.time {
-  font-size: 5px;
+h2 {
+  font-size: 15px;
 }
 #temperature {
   font-size: 50px;
@@ -48,18 +48,17 @@ body {
   padding-right: 50px;
   padding-top: 50px;
 }
-.weather-forecast {
-  display: block;
-  padding-top: 7px;
-  white-space: nowrap;
-  left: 0px;
-  top: 0px;
-  transform: translate3d(0px, 0px, 0px);
-  transition: -webkit-transform 0ms ease-in-out 0s;
+.forecast {
+  padding: 20px;
+  background: transparent;
+}
+.card {
+  background: transparent;
+  align-content: center;
 }
 .day {
-  text-align: center;
-  margin: 10px;
+  margin-top: 1rem;
+  margin-bottom: 0px;
 }
 .small {
   text-align: center;

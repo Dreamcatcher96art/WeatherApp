@@ -13,7 +13,8 @@ let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`
 }
 
-function displayForecast(){
+function displayForecast(response){
+    console.log(response.data.daily)
     let forecastElement = document.querySelector("#forecast");
     let forecastHTML = "";
     let days = ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -35,6 +36,7 @@ function getForecast(coordinates){
     let apiKey = "97a9745b0c3a1f932357060a2331ab49";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayForecast);
+    console.log(apiUrl)
 }
 
 
@@ -57,6 +59,8 @@ timeElement.innerHTML = formatDate(response.data.dt*1000)
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png `);
 iconElement.setAttribute("alt", response.data.weather[0].description);
+
+getForecast(response.data.coord);
 }
 
 function search(city){
@@ -73,7 +77,6 @@ function handleSubmit(event){
 }
 
 search("Gdynia");
-displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);

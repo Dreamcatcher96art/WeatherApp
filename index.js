@@ -16,7 +16,7 @@ return `${day} ${hours}:${minutes}`
 function displayForecast(){
     let forecastElement = document.querySelector("#forecast");
     let forecastHTML = "";
-    let days = ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+    let days = ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     days.forEach(function(day){
     forecastHTML = forecastHTML+`
             <div class="card">
@@ -27,6 +27,16 @@ function displayForecast(){
     })
     forecastElement.innerHTML = forecastHTML
 }
+
+
+
+function getForecast(coordinates){
+    console.log(coordinates)
+    let apiKey = "97a9745b0c3a1f932357060a2331ab49";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
+}
+
 
 function displayTemperature(response){
     console.log(response.data)
